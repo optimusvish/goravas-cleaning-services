@@ -1,17 +1,266 @@
 ---
-
+import { company } from "../data/company";
+import { services } from "../data/services";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+    Gorava's Cleaning Services | Professional Cleaning Services in Tirupati
+  </title>
+
+  <meta
+    name="description"
+    content="Professional Deep Cleaning, Bathroom Cleaning, Kitchen Cleaning, Water Tank Cleaning, Office Cleaning and Painting Services in Tirupati."
+  />
+
+  <link rel="icon" href="/favicon.ico" />
+</head>
+
+<body class="bg-white text-slate-800">
+
+  <!-- Header -->
+  <header class="sticky top-0 bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+      <h1 class="font-bold text-2xl text-blue-900">
+        Gorava's Cleaning Services
+      </h1>
+
+      <a
+        href={`tel:${company.phone}`}
+        class="bg-green-600 text-white px-5 py-2 rounded-lg"
+      >
+        Call Now
+      </a>
+
+    </div>
+  </header>
+
+  <!-- Hero -->
+
+  <section class="bg-gradient-to-r from-blue-900 to-green-700 text-white">
+
+    <div class="max-w-7xl mx-auto px-6 py-24 text-center">
+
+      <h1 class="text-5xl font-bold mb-6">
+        Professional Cleaning Services in Tirupati
+      </h1>
+
+      <p class="text-xl mb-8">
+        We Clean Your Space Like It's Our Own
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4">
+
+        <a
+          href={`tel:${company.phone}`}
+          class="bg-orange-500 px-8 py-4 rounded-lg font-semibold"
+        >
+          Call Now
+        </a>
+
+        <a
+          href={`https://wa.me/${company.whatsapp}`}
+          target="_blank"
+          class="bg-green-600 px-8 py-4 rounded-lg font-semibold"
+        >
+          WhatsApp Now
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Trust Bar -->
+
+  <section class="bg-slate-100 py-6">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid md:grid-cols-5 gap-4 text-center">
+
+        <div>⭐ 16 Google Reviews</div>
+        <div>✓ Same Day Service</div>
+        <div>✓ Affordable Pricing</div>
+        <div>✓ Trained Professionals</div>
+        <div>✓ Eco Friendly Products</div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Services -->
+
+  <section class="py-20">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <h2 class="text-4xl font-bold text-center mb-12">
+        Our Services
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        {services.map((service) => (
+
+          <div class="bg-white border rounded-2xl p-8 shadow hover:shadow-xl transition">
+
+            <h3 class="text-2xl font-bold mb-4">
+              {service.name}
+            </h3>
+
+            <p class="text-slate-600">
+              Professional {service.name.toLowerCase()} services in Tirupati.
+            </p>
+
+          </div>
+
+        ))}
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Why Choose Us -->
+
+  <section class="bg-slate-50 py-20">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <h2 class="text-4xl font-bold text-center mb-12">
+        Why Choose Us
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="bg-white p-6 rounded-xl shadow">
+          Trained & Verified Professionals
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow">
+          Affordable Pricing
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow">
+          Eco Friendly Cleaning Products
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow">
+          Modern Equipment
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow">
+          Same Day Service
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow">
+          100% Customer Satisfaction
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Service Areas -->
+
+  <section class="py-20">
+
+    <div class="max-w-6xl mx-auto px-6 text-center">
+
+      <h2 class="text-4xl font-bold mb-10">
+        Areas We Serve
+      </h2>
+
+      <div class="flex flex-wrap justify-center gap-4">
+
+        <span class="bg-slate-100 px-4 py-2 rounded-full">
+          Tirupati
+        </span>
+
+        <span class="bg-slate-100 px-4 py-2 rounded-full">
+          MR Palli
+        </span>
+
+        <span class="bg-slate-100 px-4 py-2 rounded-full">
+          LB Nagar
+        </span>
+
+        <span class="bg-slate-100 px-4 py-2 rounded-full">
+          Renigunta
+        </span>
+
+        <span class="bg-slate-100 px-4 py-2 rounded-full">
+          Tiruchanoor
+        </span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Contact -->
+
+  <section class="bg-blue-900 text-white py-20">
+
+    <div class="max-w-4xl mx-auto px-6 text-center">
+
+      <h2 class="text-4xl font-bold mb-8">
+        Contact Us
+      </h2>
+
+      <p class="text-xl mb-4">
+        {company.name}
+      </p>
+
+      <p class="mb-2">
+        📞 {company.phone}
+      </p>
+
+      <p class="mb-6">
+        📍 {company.address}
+      </p>
+
+      <a
+        href={`https://wa.me/${company.whatsapp}`}
+        target="_blank"
+        class="bg-green-600 px-8 py-4 rounded-lg inline-block"
+      >
+        WhatsApp Now
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- Floating Buttons -->
+
+  <a
+    href={`tel:${company.phone}`}
+    class="fixed bottom-24 right-6 w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-white text-2xl shadow-xl"
+  >
+    📞
+  </a>
+
+  <a
+    href={`https://wa.me/${company.whatsapp}`}
+    target="_blank"
+    class="fixed bottom-6 right-6 w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white text-2xl shadow-xl"
+  >
+    💬
+  </a>
+
+</body>
 </html>

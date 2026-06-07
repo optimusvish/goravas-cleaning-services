@@ -5,7 +5,7 @@ export const company = {
   address: "LB Nagar, MR Palli Road, Tirupati - 517501",
   city: "Tirupati",
   site: "https://cleaningservices.netlify.app",
-  email: "goravascleaningservice@gmail.com",
+  email: "goravascleaningservices@gmail.com",
   sheets: {
     reviews: "",
     gallery: "",
